@@ -1,1 +1,21 @@
 protoc   --proto_path=proto   --go_out=./userpb --go_opt=paths=source_relative   --go-grpc_out=./userpb --go-grpc_opt=paths=source_relative   proto/user.proto
+grpcurl -plaintext -d '{"id":1}' localhost:50051 user.UserService/GetUserById
+migrate create -ext sql -dir db/migrations -seq create_users_table
+migrate -database sqlite3://db.sqlite -path db/migrations up
+migrate -database sqlite3://db.sqlite -path db/migrations down
+
+
+# Create a new migration
+migrate create -ext sql -dir db/migrations -seq migration_name
+
+# Apply all migrations
+migrate -database "sqlite3://blog.db" -path db/migrations up
+
+# Roll back
+migrate -database "sqlite3://blog.db" -path db/migrations down 1
+
+# Force a specific version
+migrate -database "sqlite3://blog.db" -path db/migrations force VERSION
+
+# Check current version
+migrate -database "sqlite3://blog.db" -path db/migrations version

@@ -138,7 +138,7 @@ const file_user_proto_rawDesc = "" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
 	"\x05email\x18\x03 \x01(\tR\x05email2F\n" +
 	"\vUserService\x127\n" +
-	"\vGetUserById\x12\x14.user.GetUserRequest\x1a\x12.user.UserResponseB5Z3github.com/hoang19020302/go-user-service/gen/userpbb\x06proto3"
+	"\vGetUserById\x12\x14.user.GetUserRequest\x1a\x12.user.UserResponseB1Z/github.com/hoang19020302/go-user-service/userpbb\x06proto3"
 
 var (
 	file_user_proto_rawDescOnce sync.Once

@@ -6,7 +6,7 @@ import (
     "net"
 
     "google.golang.org/grpc"
-    pb "github.com/hoang19020302/go-user-service/gen/userpb"
+    pb "github.com/hoang19020302/go-user-service/userpb"
 )
 
 type server struct {

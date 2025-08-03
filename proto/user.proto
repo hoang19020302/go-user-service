@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "github.com/hoang19020302/go-user-service/gen/userpb";
+option go_package = "github.com/hoang19020302/go-user-service/userpb";
 
 service UserService {
   rpc GetUserById (GetUserRequest) returns (UserResponse);

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/hoang19020302/go-user-service/gen/userpb";
+
+service UserService {
+  rpc GetUserById (GetUserRequest) returns (UserResponse);
+}
+
+message GetUserRequest {
+  int32 id = 1;
+}
+
+message UserResponse {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+}
